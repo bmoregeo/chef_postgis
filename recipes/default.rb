@@ -1,4 +1,4 @@
-execute :create_postgis_database
+execute :create_postgis_database do
 	user "postgres"
 	command "createdb -E UTF8 --locale=en_US.utf8 #{node[:postgis][:database_name]}"
 	action :run
