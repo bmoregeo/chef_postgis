@@ -1,0 +1,1 @@
+default[:postgis][:database_name] = "postgis"
