@@ -1,3 +1,4 @@
 # PostGIS chef recipe
 
-Installs PostGIS extensions for postgresql
+A chef recipe for installing postgis extensions to a database in postgresql
+
