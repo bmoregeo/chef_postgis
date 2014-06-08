@@ -8,14 +8,9 @@ execute :create_postgis_database do
 end
 
 for extension in ["postgis", "postgis_topology", "fuzzystrmatch", "postgis_tiger_geocoder"] do
-	execute "Drop #{extension}" do
-		user "postgres"
-		command "psql -d #{node[:postgis][:database_name]}  -c 'DROP EXTENSION IF EXISTS #{extension}'"
-		action :run
-	end
 	execute "Install #{extension}" do
 		user "postgres"
-		command "psql -d #{node[:postgis][:database_name]}  -c 'CREATE EXTENSION #{extension}'"
+		command "psql -d #{node[:postgis][:database_name]}  -c 'CREATE EXTENSION IF NOT EXISTS #{extension}'"
 		action :run
 	end
 end
