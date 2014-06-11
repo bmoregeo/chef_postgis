@@ -4,7 +4,7 @@ A chef recipe for creating a posrgres database with postgis extensions installed
 
 ## Dependency
 
-* (http://community.opscode.com/cookbooks/postgresql) [PostgreSQL]
+* [PostgreSQL](http://community.opscode.com/cookbooks/postgresql) 
 
 ## Attributes
 
